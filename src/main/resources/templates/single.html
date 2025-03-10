@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="${producto.title}">Detalle del Producto</title>
+  <link rel="stylesheet" href="/single.css">
+</head>
+<body>
+
+<h1 th:text="${producto.title}"></h1>
+
+<div class="hotel-details">
+  <p><strong>Precio:</strong> <span th:text="${producto.price}"></span></p>
+  <p><strong>Categoría:</strong> <span th:text="${producto.category}"></span></p>
+  <p><strong>Descripción:</strong> <span th:text="${producto.description}"></span></p>
+  <p><strong>Rate:</strong> <span th:text="${producto.rate}"></span> (Sobre 5)</p>
+  <p><strong>Count:</strong> <span th:text="${producto.count}"></span></p>
+  <img th:src="${producto.image}" alt="Imagen del producto">
+</div>
+
+<a href="/web/" class="back-link">Volver al listado</a>
+
+</body>
+</html>
